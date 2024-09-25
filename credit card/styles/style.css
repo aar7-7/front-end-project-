@@ -19,6 +19,7 @@
   width: 35%;
   background-color: #000;
   border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0,0, 0, .2);
 }
 .top-content .logo {
   display: flex;
