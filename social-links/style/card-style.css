@@ -1,0 +1,64 @@
+@font-face {
+  font-family: inter-regular;
+  src: url(../assets/font/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: inter-bold;
+  src: url(../assets/font/Inter-Bold.ttf);
+}
+@font-face {
+  font-family: inter-semiBold;
+  src: url(../assets/font/Inter-SemiBold.ttf);
+}
+p{
+    color: hsl(0, 0%, 100%);
+
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 500px;
+  margin: auto;
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 15px;
+  border: 1px solid hsl(75, 94%, 57%);
+}
+.profile-img {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.name {
+  margin: 10px 0 0 0;
+  font-family: inter-bold;
+}
+.location {
+  margin: 10px 0 0 0;
+  font-family: inter-semiBold;
+  color: hsl(75, 94%, 57%);
+}
+.desc{
+    font-family: inter-regular;
+}
+.social-link{
+    height: 25px;
+    width: 200px;
+    margin: 8px 10px 8px 10px;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 10px;
+    font-family: inter-semiBold;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+}
+.social-link:hover{
+    background-color: hsl(75, 94%, 57%);
+}
