@@ -1,0 +1,84 @@
+p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(225, 100%, 94%);
+}
+h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+
+  background-color: white;
+  width: 350px;
+}
+
+#img {
+  position: relative;
+  height: 200px;
+  width: 350px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.purches-summary {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  height: 50px;
+  align-items: center;
+  background-color: hsl(225, 75%, 91%);
+  border-radius: 15px;
+}
+#music-icon {
+  margin-right: 25px;
+  margin-left: 15px;
+  height: 40px;
+}
+
+#change {
+  margin-left: 20px;
+}
+.primary-btn {
+  background-color: #4f50e6;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  width: 75%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.cancel-link {
+  font-size: 14px;
+  color: #7b7b8b;
+  text-decoration: none;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}
