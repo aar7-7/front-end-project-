@@ -1,0 +1,63 @@
+p {
+  font-family: "Red Hat Display", serif;
+  font-size: 16px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(47, 88%, 63%);
+}
+.preview-card {
+  background-color: antiquewhite;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 10px #333;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+#content {
+  padding-top: 20px;
+  width: 90%;
+  align-self: center;
+}
+#preview-img {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+#learning-btn {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  background-color: hsl(47, 88%, 63%);
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+#publish-date {
+  font-size: 12px;
+}
+#article-sub {
+  font-size: 18px;
+  font-weight: 700;
+}
+.author {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+}
+#author-img {
+  height: 40px;
+  padding-right: 10px;
+}
+#author-name {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
