@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+button{
+    border-radius: 50%;
+    border: none;
+    width: 3em;
+    height: 3em;
+
+}
+.calculation{
+    color: white;
+}
+.nice{
+    transform: rotate(360 deg);
+}
