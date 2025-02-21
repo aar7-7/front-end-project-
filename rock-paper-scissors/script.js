@@ -77,5 +77,9 @@ function logic(playerChoice) {
 
     
 }
+const arr1 = [2, 4, 3, 4];
+console.log(arr1[1]);
+arr1[6] = "banana";
+console.log(arr1);
 
   
