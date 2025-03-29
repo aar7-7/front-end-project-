@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style/mainPage.css" />
+    <link rel="stylesheet" href="activePage.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Extension manager</title>
+  </head>
+  <body>
+    <div class="extension-header">
+      <div class="left-side-content">
+        <div class="svg-container">
+          <img src="assets/logo.svg" alt="" />
+        </div>
+      </div>
+      <div class="right-side-content">
+        <div class="svg-container">
+          <button id="change-theme-btn">
+            <img src="assets/icon-sun.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="manage-container">
+      <p>Extensions List</p>
+      <div class="manage-ex-link">
+        <a href="">All</a>
+        <a href="">Active</a>
+        <a href="">Inactive</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="extension-grid"></div>
+      <div class="active-container"></div>
+      
+    </div>
+
+    <script src="screipt/mainPageScript.js" type="module"></script>
+    <script src="screipt/activePage.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(200, 60%, 99%);
+}
+.extension-header {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  border-radius: 10px;
+  background-color: hsl(226, 11%, 37%);
+  width: 70%;
+  height: 50px;
+  margin: 70px 40px 40px 40px;
+}
+.left-side-content {
+  width: 50%;
+}
+.right-side-content{
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.svg-container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+    padding-left: 10px;
+  padding-right: 10px;
+  
+  
+}
+#change-theme-btn{
+  background-color: hsl(227, 21%, 34%);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  
+}
+.manage-container{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  white-space: nowrap;
+}
+.manage-container p{
+  font-weight: 700;
+  font-size: 30px;
+}
+.manage-container a{
+  border: solid beige 2px;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background-color: hsl(226, 11%, 37%);
+  text-decoration: none;
+}
+.manage-ex-link{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.main{
+  width: 70%;
+}
+.extension-grid{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+  
+}
+.extension-container{
+  
+  
+  background-color: hsl(226, 25%, 17%);
+  border-radius: 20px;
+  padding: 20px;
+}
+.extension-container-top-content{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding-bottom: 40px;
+}
+.extension-container-top-content h4{
+  margin-top: 0;
+  font-size: 20px;
+}
+.extension-container-top-content p{
+  color: hsl(0, 0%, 93%);
+}
+.spacer{
+  width: 20px;
+}
+.ex-btn{
+  display: flex;
+  
+  bottom: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ex-btn button{
+  background-color:hsl(226, 25%, 17%) ;
+  border: solid white 1px;
+  color: white;
+  border-radius: 15px;
+} 
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the label to look like a switch */
+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+/* The round knob inside the switch */
+label:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+/* When the checkbox is checked, change the background and move the knob */
+input[type="checkbox"]:checked + label {
+  background-color: #4caf50;  /* Green when checked */
+}
+
+input[type="checkbox"]:checked + label:before {
+  transform: translateX(26px);  /* Move the knob to the right */
+}
+
+
+.active-container {
+  display: none;
+}

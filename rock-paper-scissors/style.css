@@ -9,6 +9,10 @@ body {
 h1 {
   color: rgb(123, 199, 202);
 }
+p {
+  color: rgb(123, 199, 202);
+  font-size: large;
+}
 #btns{
    display: flex;
    flex-direction: row; 
@@ -35,6 +39,7 @@ h1 {
 }
 .result{
     height: 100px;
+    width: 400px;
     color: #bea571;
     font-size: 1.5rem;
     font-weight: bold;
