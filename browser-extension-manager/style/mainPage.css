@@ -3,11 +3,14 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #040918 0%, #091540 100%);
-  height: 100vh;
+  
   font-size: 16px;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   color: hsl(200, 60%, 99%);
+}
+.active-container {
+  display: none;
 }
 .extension-header {
   display: flex;
@@ -56,7 +59,7 @@ body {
   font-weight: 700;
   font-size: 30px;
 }
-.manage-container a{
+.manage-container button{
   border: solid beige 2px;
   border-radius: 20px;
   margin: 10px;
@@ -108,7 +111,7 @@ body {
 }
 .ex-btn{
   display: flex;
-  
+  height: 40px;
   bottom: 0;
   flex-direction: row;
   justify-content: space-between;
@@ -159,6 +162,3 @@ input[type="checkbox"]:checked + label:before {
 }
 
 
-.active-container {
-  display: none;
-}

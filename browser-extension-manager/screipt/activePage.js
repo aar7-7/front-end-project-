@@ -1,52 +1,53 @@
-import { stateEx } from "./state.js";
-import { exData } from "../data/extonsionData.js";
-let matchingItem = [];
-let activeExtensionHTML = "";
-
-exData.forEach((extension) => {
-  stateEx.forEach((state) => {
-    if (extension.name === state.exName) {
-      matchingItem.push(extension);
-    }
-  });
-});
-console.log(matchingItem);
-matchingItem.forEach((extension) => {
-  activeExtensionHTML += `
-<div class="extension-container">
+import { extensionState } from "./state.js";
+import { extensionData } from "../data/extonsionData.js";
+let extensionHTML;
+function findActiveExt() {
+  extensionState.forEach((extState) => {
+    let machingExtension;
+    extensionData.forEach((extData) => {
+      if (extState.extensionName === extData.name) {
+        machingExtension = extData;
+      }
+    });
+    extensionHTML += `
+        <div class="extension-container js-extension-${machingExtension.name}">
           <div class="extension-container-top-content">
             <div>
-              <img src="${extension.logo}" alt="${extension.name} logo" />
+              <img src="${machingExtension.logo}" alt="${machingExtension.name} logo" />
             </div>
             <div class="spacer"></div>
             <div>
-              <h4>${extension.name}</h4>
+              <h4>${machingExtension.name}</h4>
               <p>
-                ${extension.description}
+                ${machingExtension.description}
               </p>
             </div>
           </div>
           <div class="ex-btn">
-            <button>Remove</button>
-            <div class="switch" data-ex-name="${extension.name}">
-              <input type="checkbox" id="toggle-${extension.name}" />
-              <label for="toggle-${extension.name}"></label>
-            </div>
+            <button class="remove-active-extension-btn js-remove-extension-btn"  >Remove</button>
+            
           </div>
         </div>`;
+  });
+}
+let activeContainer = document.querySelector(".active-extension-container");
+let extensionGrid = document.querySelector(".extension-grid");
+document.querySelector(".active-list").addEventListener("click", () => {
+  findActiveExt();
+
+  activeContainer.innerHTML = extensionHTML;
+  activeContainer.style.display = "grid";
+  extensionGrid.style.display = "none";
 });
-document.querySelector('.active-container').innerHTML = activeExtensionHTML;
-document.addEventListener("DOMContentLoaded", () => {
-  const allExtensions = document.querySelector(".extension-grid");
-  const activeExtensions = document.querySelector(".active-container");
-  const activeLink = document.querySelector('.manage-ex-link a:nth-child(2)'); // Select "Active" link
-
-  if (activeLink) {
-    activeLink.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent default link behavior
-
-      allExtensions.style.display = "none";  // Hide all extensions
-      activeExtensions.style.display = "block"; // Show active extensions
+document.querySelector(".all-list").addEventListener("click", () => {
+  extensionGrid.style.display = "grid";
+  activeContainer.style.display = "none";
+});
+function removeExtension(extensionName) {
+  let container = document.querySelector(`.js-extension-${extensionName}`);
+  document
+    .querySelector(".remove-active-extension-btn")
+    .addEventListener("click", () => {
+      container.remove();
     });
-  }
-});
+}
