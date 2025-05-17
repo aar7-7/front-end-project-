@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: hsl(203, 57%, 82%);
+  margin: 0;
+  padding: 0;
+}
+.mortgage-calculator {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.calculation-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 20px;
+  padding-top: 20px;
+
+  
+}
+.result-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  
+  background-color: hsl(200, 24%, 40%);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 70px;
+  padding-top: 20px;
+  padding-left: 20px;
+}

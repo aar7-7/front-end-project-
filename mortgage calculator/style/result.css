@@ -1,0 +1,47 @@
+
+
+  .header {
+    font-weight: 500;
+  font-size: 1.2rem;
+    
+  }
+
+  .subtext {
+    color: #b0c4d8;
+    font-size: 0.95em;
+    margin-bottom: 30px;
+    margin:25px 20px 0 0;
+  }
+
+  .result-box {
+    background-color: #0c2b3c;
+    border-left: 4px solid #d0ff36;
+    padding: 25px 20px 0 25px;
+    margin:25px 20px 0 0; 
+    border-radius: 8px;
+  }
+
+  .monthly {
+    color: #a9bcd6;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+  }
+
+  .amount {
+    color: #d0ff36;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .total-label {
+    color: #a9bcd6;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+  }
+
+  .total-amount {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+  }
