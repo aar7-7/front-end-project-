@@ -1,20 +1,13 @@
 let score = JSON.parse(localStorage.getItem("score"));
 let result;
-function play() {
-  const choices = ["rock", "paper", "scissors"];
-  const randomValue = choices[Math.floor(Math.random() * choices.length)];
-  logic(randomValue);
-  console.log("jj");
+function play(playerChoice) {
+  logic(playerChoice);
 }
 
 function updateScore(result) {
   document.querySelector(".js-score").innerHTML = `${result}`;
   if (score === null) {
-    score = {
-      wins: 0,
-      losses: 0,
-      tie: 0,
-    };
+    score = [(wins = 0), (losses = 0), (tie = 0)];
   }
   document.querySelector(
     "#score"
@@ -68,6 +61,7 @@ function logic(playerChoice) {
         />
         `;
   }
+
   if (result.startsWith("Win")) {
     score.wins += 1;
   } else if (result.startsWith("Lose")) {
