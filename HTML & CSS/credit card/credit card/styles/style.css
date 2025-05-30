@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.credit-card {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.credit-card .card {
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0,0, 0, .2);
+}
+.top-content .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.top-content,
+.right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
+}
+.card-number .number {
+  padding: 0 0 0 20px;
+  margin: 0;
+  display: flex;
+}
+.card .bottom-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px 10px 20px;
+  margin: 0;
+}
+.bottom-content .date {
+  padding: 0;
+  margin: 0;
+}
+.bottom-content .credit-name {
+  display: flex;
+  align-items: end;
+  margin: 0;
+}
