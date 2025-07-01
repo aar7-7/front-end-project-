@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    font-family:inter, sans-serif;
+    height: 100vh;
+    ;
+    background: #555454;
+    background-image: url('../my-react-app/.vite/deps/assets/icons8-react-480.png');
+    background-repeat: no-repeat;
+    background-position-x:right;
+    background-position-y: center;
+    background-size: 300px;
+    
+}
+.header{
+    display: flex;
+    justify-content: start;
+    margin: 0;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    
+}
+.react-logo{
+    margin-right:20px;
+}
+.header h1{
+    color: #61DAFB;
+    font-size: 1.4;
+    font-weight: 700;
+}
+.main-content{
+    margin-left:20px;
+    color : #fff
+}
+.main-content h1{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.list ::marker{
+    color : #61DAFB;
+    font-size:1.4rem ;
+}
