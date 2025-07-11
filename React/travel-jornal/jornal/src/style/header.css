@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orangered;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.header img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.header span{
+    color: white;
+    font-size: 1.5rem;
+    font-family: inter, sans-serif;
+    font-weight: bold;
+} 

@@ -1,0 +1,46 @@
+.card{
+    
+    font-family: inter,sans-serif;
+    display: flex;
+    border: #333 solid 1px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.location-poster {
+    margin: 10px;
+    padding-right: 20px;
+    
+}
+.location-poster img{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+.location-detail{
+    margin: 20px 20px 0 0;
+}
+.location-detail .location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    
+}
+.location img{
+    width: 30px;
+    
+}
+.location span {
+    padding-right: 15px;
+}
+.location a{
+    color: #333;
+}
+.travel-date{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.travel-description{
+    color: #333;
+    text-align:justify;
+}
