@@ -2,7 +2,7 @@
     
     font-family: inter,sans-serif;
     display: flex;
-    border: #333 solid 1px;
+    /* border: #333 solid 1px; */
     border-radius: 10px;
     margin: 10px;
 }
