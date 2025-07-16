@@ -1,46 +1,70 @@
-.card{
-    
-    font-family: inter,sans-serif;
-    display: flex;
-    /* border: #333 solid 1px; */
-    border-radius: 10px;
-    margin: 10px;
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
-.location-poster {
-    margin: 10px;
-    padding-right: 20px;
-    
+
+.card-img {
+  width: 280px;
+  height: auto;
+  object-fit: cover;
 }
-.location-poster img{
-    width: 200px;
-    height: 250px;
-    border-radius: 10px;
+
+.card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.location-detail{
-    margin: 20px 20px 0 0;
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
 }
-.location-detail .location {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   
-    
+
+.location-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
 }
-.location img{
-    width: 30px;
-    
+
+.location a {
+  color: #0077cc;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 13px;
 }
-.location span {
-    padding-right: 15px;
+
+.location a:hover {
+  text-decoration: underline;
 }
-.location a{
-    color: #333;
+
+.location-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  margin: 10px 0;
 }
-.travel-date{
-    font-weight: 500;
-    margin-bottom: 10px;
+
+.date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
 }
-.travel-description{
-    color: #333;
-    text-align:justify;
+
+.description {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
 }
