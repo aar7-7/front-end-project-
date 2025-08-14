@@ -1,19 +1,59 @@
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  width: 60%;
+  padding: 20px 0 20px 0px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ingredients-on-hand{
+width: 100%;
 
 }
-.ingredient-form {
-    padding: 20px; 
+.get-recipe-suggestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #F0EFEB;
+    padding: 10px 28px;
 }
-.ingredient-form input {
+.get-recipe-suggestion h3{
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+.get-recipe-suggestion p{
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+.get-recipe-suggestion button{
+    font-family: inter,sans-serif;
     font-size: 1.1rem;
-    width: 300px;
-    flex-grow: 1;
-    max-width: 400px;
-    min-width: 100px;
+    padding: 10px 20px;
+    background-color: #090909;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.get-recipe-suggestion button:hover{
+    background-color: #63b1ec
+}
+.ingredient-form{
+    display: flex;  
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ingredient-form input {
+    display: flex;
+    width: 60%;
+    font-size: 1.1rem;
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -23,8 +63,7 @@
     font-family: inter,sans-serif;
     font-size: 1.1rem;
     padding: 10px 20px;
-    max-width: 250px;
-    min-width: 100px;
+
     background-color: #090909;
     color: white;
     border: none;

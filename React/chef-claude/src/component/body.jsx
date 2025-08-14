@@ -14,8 +14,19 @@ export default function Main(){
           <form className="ingredient-form" action={addIngredient}>
             <input type="text" placeholder="e.g Oregano" name="ingredient" />
             <button>Add ingredient</button>
-            <ul>{ingredienstsListItem}</ul>
           </form>
+
+          <div className="ingredients-on-hand">
+            <h2>ingredients on hand:</h2>
+            <ul>{ingredienstsListItem}</ul>
+            <div className="get-recipe-suggestion">
+              <div>
+                <h3>Ready for a recipe?</h3>
+                <p>Generate a recipe from your list of ingredients.</p>
+              </div>
+              <button>Get a recipe</button>
+            </div>
+          </div>
         </div>
       </>
     );
