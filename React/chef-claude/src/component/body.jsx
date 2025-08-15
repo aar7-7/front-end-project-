@@ -1,20 +1,19 @@
 import React from "react";
 import CludeRecipe from "./cludeRecipe";
 import IngredientsList from "./ingredientsList";
+import { getRecipeFromMistral } from "../ai";
 export default function Main() {
-  const [ingredients, setIngredients] = React.useState([
-    "all the main spices",
-    "pasta",
-    "ground beef",
-  ]);
-  const [recipeShown, setRecipeShown] = React.useState(false);
+  const [ingredients, setIngredients] = React.useState([]);
+  const [recipe, setRecipe] = React.useState("");
 
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
-  function flipResipeShown() {
-    setRecipeShown((prevRecipeShown) => !prevRecipeShown);
+  async function getRecipe() {
+    const recipe = await getRecipeFromMistral(ingredients);
+    setRecipe(recipe);
+    console.log(recipe);
   }
 
   return (
@@ -25,12 +24,9 @@ export default function Main() {
           <button>Add ingredient</button>
         </form>
         {ingredients.length > 0 ? (
-          <IngredientsList
-            ingredients={ingredients}
-            flipResipeShown={flipResipeShown}
-          />
+          <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
         ) : null}
-        {recipeShown ? <CludeRecipe /> : null}
+        {recipe ? <CludeRecipe recipe={recipe} /> : null}
       </div>
     </>
   );
