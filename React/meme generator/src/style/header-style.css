@@ -1,10 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .header{
     font-family: "Karla", sans-serif;
+    width: 100%;
     font-size: .9rem;
     display: flex;
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
