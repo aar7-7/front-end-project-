@@ -45,6 +45,9 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
     
 }
 
@@ -64,25 +67,31 @@ body{
     align-items: center;
     justify-content: center;
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 48px;
+  font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
   text-shadow: 2px 2px 0 #000;
    
 }
 .meme-image{
-    width: 20%;
+    width: 100%;
+    max-width: 400px;
  
 }
 .top-txt{
     position: absolute;
     top: 10px;
-    
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   
 
 }
 .bottom-txt{
     position: absolute;
     bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     
 }

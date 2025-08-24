@@ -1,52 +1,61 @@
-import catMemeImage from "./assets/cat-meme.jpeg";
 import React from "react";
+
 export default function Body() {
-  const [meme, setMeme] = React.useState({
+  const [meme, setMeme] = React.useState(() => ({
     topText: "",
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
-  });
-  function getMeme(formData) {
-    let upperTxt = formData.get("top-text");
-    let bottemTxt = formData.get("bottom-text");
-    setMeme((prevMeme) => ({
-      ...prevMeme,
-      topText: upperTxt,
-      bottomText: bottemTxt,
-    }));
-  }
+  }));
+
+  const handleChange = React.useCallback((event) => {
+    const { name, value } = event.target;
+    setMeme((prevMeme) => ({ ...prevMeme, [name]: value }));
+  }, []);
+
   return (
     <main className="body">
-      <form className="meme-form" action={getMeme}>
+      <form
+        className="meme-form"
+        onSubmit={(e) => e.preventDefault()}
+        aria-label="Meme Generator Form"
+      >
         <div className="input-row">
           <div className="form-group">
             <label htmlFor="top-text">Top text</label>
             <input
               type="text"
-              name="top-text"
+              id="top-text"
+              name="topText"
               placeholder="Top text"
               className="top-text"
-              id="top-text"
+              onChange={handleChange}
+              value={meme.topText}
             />
           </div>
           <div className="form-group">
             <label htmlFor="bottom-text">Bottom text</label>
             <input
               type="text"
-              name="bottom-text"
+              id="bottom-text"
+              name="bottomText"
               placeholder="Bottom text"
               className="bottom-text"
-              id="bottom-text"
+              onChange={handleChange}
+              value={meme.bottomText}
             />
           </div>
         </div>
-
         <button className="meme-button">Get a new meme image 🖼️</button>
       </form>
-      <div className="meme">
-        <img src={meme.randomImage} alt="" className="meme-image" />
-        <div className="top-txt">{meme.topText}</div>
-        <div className="bottom-txt">{meme.bottomText}</div>
+
+      <div className="meme" aria-live="polite">
+        <img
+          src={meme.randomImage}
+          alt={`Meme with top text: "${meme.topText}" and bottom text: "${meme.bottomText}"`}
+          className="meme-image"
+        />
+        <p className="top-txt">{meme.topText}</p>
+        <p className="bottom-txt">{meme.bottomText}</p>
       </div>
     </main>
   );
