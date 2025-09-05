@@ -2,12 +2,13 @@
 .header{
     font-family: "Karla", sans-serif;
     width: 100%;
+    min-width: 500px;
     font-size: .9rem;
     display: flex;
     background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
     color: white;
     align-items: center;
-    padding: 12px 20px;
+    padding: 10px 0 10px 0;
     justify-content: start;
 }
 .header img {
