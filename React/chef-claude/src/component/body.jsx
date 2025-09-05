@@ -10,6 +10,12 @@ export default function Main() {
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
+  const recipeSection = React.useRef();
+  React.useEffect(() => {
+    if (recipe !== "" && recipeSection !== null) {
+      recipeSection.current.scrollIntoView();
+    }
+  }, [recipe]);
   async function getRecipe() {
     const recipe = await getRecipeFromMistral(ingredients);
     setRecipe(recipe);
@@ -24,7 +30,11 @@ export default function Main() {
           <button>Add ingredient</button>
         </form>
         {ingredients.length > 0 ? (
-          <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+          <IngredientsList
+            ref={recipeSection}
+            ingredients={ingredients}
+            getRecipe={getRecipe}
+          />
         ) : null}
         {recipe ? <CludeRecipe recipe={recipe} /> : null}
       </div>
