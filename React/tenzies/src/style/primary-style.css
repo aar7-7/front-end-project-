@@ -1,5 +1,5 @@
 body{
-    background-color: #333;
+    background-color: #0B2434;
     
 }
 .main{
@@ -11,9 +11,32 @@ body{
     
 }
 .game-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    min-width: 400px;
+    min-height: 400px;
     height: 45%;
     width: 45%;
-    background-color:antiquewhite ;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: #f9f9f9;
     border-radius:10px;
     border:1px solid #FFF;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.game-container > * {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.game-container > *:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }

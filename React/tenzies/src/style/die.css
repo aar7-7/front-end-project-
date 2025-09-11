@@ -1,0 +1,17 @@
+.die-face {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: 60px;
+    width: 60px;
+}
+
+.die-face:active {
+    transform: scale(0.95);
+}
