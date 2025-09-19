@@ -1,20 +1,30 @@
 import Die from "./components/die.jsx";
+import React from "react";
+import { nanoid } from "nanoid";
 function App() {
+  const [dice, setDice] = React.useState(generateAllNewDice());
+  function generateAllNewDice() {
+    const diceArr = [];
+    for (var i = 1; i <= 10; i++) {
+      const randNum = Math.floor(Math.random() * 6) + 1;
+      diceArr.push({ vlaue: randNum, isHeld: false, id: nanoid() });
+    }
+    return diceArr;
+  }
+  const diceElement = dice.map((dieObj) => {
+    return <Die key={dieObj.id} value={dieObj.vlaue} />;
+  });
+  function rollDice() {
+    setDice(generateAllNewDice());
+  }
+
   return (
     <>
       <div className="main">
-        <div className="game-container">
-          <Die value={1} />
-          <Die value={2} />
-          <Die value={3} />
-          <Die value={4} />
-          <Die value={5} />
-          <Die value={6} />
-          <Die value={6} />
-          <Die value={6} />
-          <Die value={6} />
-          <Die value={6} />
-        </div>
+        <div className="game-container">{diceElement}</div>{" "}
+        <button className="roll-dice" onClick={rollDice}>
+          Roll
+        </button>
       </div>
     </>
   );
