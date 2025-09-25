@@ -7,12 +7,12 @@ function App() {
     const diceArr = [];
     for (var i = 1; i <= 10; i++) {
       const randNum = Math.floor(Math.random() * 6) + 1;
-      diceArr.push({ vlaue: randNum, isHeld: false, id: nanoid() });
+      diceArr.push({ vlue: randNum, isHeld: true, id: nanoid() });
     }
     return diceArr;
   }
   const diceElement = dice.map((dieObj) => {
-    return <Die key={dieObj.id} value={dieObj.vlaue} />;
+    return <Die key={dieObj.id} value={dieObj.vlue} isHeld={dieObj.isHeld} />;
   });
   function rollDice() {
     setDice(generateAllNewDice());

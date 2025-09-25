@@ -1,4 +1,12 @@
 import {} from "../style/die.css"
 export default function Die(props){
-    return <button className="die-face">{props.value}</button>;
+  const styles = {
+    backgroundColor: props.isHeld ? "#59E391" : "white",
+  };
+
+  return (
+    <button style={styles} className="die-face">
+      {props.value}
+    </button>
+  );
 }
