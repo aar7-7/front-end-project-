@@ -5,7 +5,7 @@ export default function Die(props){
   };
 
   return (
-    <button style={styles} className="die-face">
+    <button onClick={props.hold} style={styles} className="die-face">
       {props.value}
     </button>
   );
