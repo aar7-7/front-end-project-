@@ -1,4 +1,6 @@
 import './styles/primary-style.css';
+import StatusSection from "./components/status-section.jsx";
+import element from "./components/language.jsx";
 function App() {
   return (
     <div className="header">
@@ -7,6 +9,8 @@ function App() {
         Assembly: Endgame Guess the word in under 8 attempts to keep the
         programming world safe from Assembly!
       </p>
+      <StatusSection />
+      <section className="language">{element}</section>
     </div>
   );
 }
