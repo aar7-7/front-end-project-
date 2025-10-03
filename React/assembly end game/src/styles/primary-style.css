@@ -4,10 +4,21 @@ body {
   background-color: #262626;
   color: #d9d9d9;
   padding: 20px;
+  
   height: 100vh;
   display: flex;
   justify-content: center;
+  
+  text-align: center;
   color: #f9f4da;
+}
+.main-section{
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
 }
 .header {
   text-align: center;
@@ -15,6 +26,7 @@ body {
 }
 
 .header h1 {
+  max-width: 350px;
   font-size: 1.25rem;
   font-weight: 500;
 }
@@ -24,6 +36,7 @@ body {
   color: #8e8e8e;
 }
 .status {
+  width: 350px;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -43,4 +56,37 @@ body {
   margin: 5px;
   color: #f9f4da;
 }
-
+.keyboard {
+  margin: 20px auto 0; /* top | auto (horizontal) | bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+.alphabet{
+  text-transform: uppercase;
+  margin: 3px;
+  height: 35px;
+    width: 35px;
+    background-color: #FCBA29;
+    border: 1px solid #D7D7D7;
+    border-radius: 3px;
+    cursor: pointer;
+  
+}
+.new-game{
+  margin-top: 20px;
+  background-color: #32a3d7;
+  border: none;
+  color: #f9f4da;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.new-game:hover{
+  background-color: #0e8c4e;
+}

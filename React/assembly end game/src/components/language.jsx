@@ -8,10 +8,14 @@ function Language(props){
         </div>
     );
 }
-const element = languages.map((language)=>{
-    return(
-        <Language lanName={language.name} color={language.backgroundColor} key={language.name} />
-    )
+const langEelement = languages.map((language) => {
+  return (
+    <Language
+      lanName={language.name}
+      color={language.backgroundColor}
+      key={language.name}
+    />
+  );
 });
 
-export default element;
+export default langEelement;
