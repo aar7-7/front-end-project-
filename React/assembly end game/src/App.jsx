@@ -33,7 +33,11 @@ function App() {
       </div>
 
       <section className="keyboard">
-        <Keyboard setGussedLetter={setGussedLetter} />
+        <Keyboard
+          gussedLetter={gussedLetter}
+          setGussedLetter={setGussedLetter}
+          currentWord={currentWord}
+        />
       </section>
       <button className="new-game">new game</button>
     </>
