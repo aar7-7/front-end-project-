@@ -6,7 +6,8 @@ import langEelement from "./components/language.jsx";
 import Keyboard from "./components/keyboard.jsx";
 function App() {
   const [currentWord, setCurrentWord] = React.useState("react");
-
+  const [gussedLetter, setGussedLetter] = React.useState([]);
+  console.log(gussedLetter);
   const letters = currentWord.split("");
   const lettersElement = letters.map((letter, index) => {
     return (
@@ -32,7 +33,7 @@ function App() {
       </div>
 
       <section className="keyboard">
-        <Keyboard />
+        <Keyboard setGussedLetter={setGussedLetter} />
       </section>
       <button className="new-game">new game</button>
     </>
