@@ -7,12 +7,13 @@ import Keyboard from "./components/keyboard.jsx";
 function App() {
   const [currentWord, setCurrentWord] = React.useState("react");
   const [gussedLetter, setGussedLetter] = React.useState([]);
-  console.log(gussedLetter);
   const letters = currentWord.split("");
+
   const lettersElement = letters.map((letter, index) => {
+    const isGussed = gussedLetter.includes(letter);
     return (
       <span className="letter" key={index}>
-        {letter}
+        {isGussed ? letter : ""}
       </span>
     );
   });
