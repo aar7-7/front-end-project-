@@ -1,15 +1,32 @@
-.language{
-    max-width: 340px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    color: #000; 
-    padding: 5px 10px;
-    border-radius: 4px;
-    margin: 3px;
-    font-size: 1.1rem;
-    
-    
+.language {
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin: 3px;
+  font-size: 1.1rem;
+}
+.language-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 340px;
+}
+.language-lost {
+  position: relative;
+  opacity: 0.5;                /* fade the language */
+  filter: grayscale(100%);     /* make it gray */
+}
 
+.language-lost::after {
+  content: "✖";               /* X mark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  pointer-events: none;       /* don't block clicks */
 }
