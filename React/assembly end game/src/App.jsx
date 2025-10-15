@@ -5,7 +5,7 @@ import StatusSection from "./components/status-section.jsx";
 import Language from "./components/language.jsx";
 import Keyboard from "./components/keyboard.jsx";
 function App() {
-  const [currentWord, setCurrentWord] = React.useState("reactrtt");
+  const [currentWord, setCurrentWord] = React.useState("react");
   const [gussedLetter, setGussedLetter] = React.useState([]);
   const [lostLanguage, setLostLanguage] = React.useState([]);
   const letters = currentWord.split("");
@@ -48,7 +48,7 @@ function App() {
           <h1>Assembly: Endgame</h1>
           <p>
             Assembly: Endgame Guess the word in under 8 attempts to keep the
-            programming world safe from Assembly!
+            programming world safe from Assembly! hint - react
           </p>
         </div>
         <StatusSection isGameOver={isGameOver} isGameWon={isGameWon} />
