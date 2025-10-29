@@ -52,11 +52,6 @@ Some React projects included:
 3.	Open your browser at http://localhost:5173 (or the port shown in your terminal).
 
 
-Future Improvements
-	•	Add more interactive React projects
-	•	Migrate vanilla JS projects to React
-	•	Integrate TailwindCSS for styling
-	•	Deploy projects to Netlify or Vercel with live demos
 
 Author:
 
