@@ -1,9 +1,7 @@
 import arrowDown from '../assets/icon-arrow-down.svg'
 import logo from '../assets/logo.svg'
-import Menu from "./menu/menu.jsx";
-import MenuButton from "./menu/menuButton.jsx";
-import MenuDropdown from "./menu/menuDropdown.jsx";
-import MenuItem from "./menu/menuItem.jsx";
+import Menu from "../index.js";
+
 export default function Header() {
   const featureItems = ["Todo List", "Calendar", "Reminders", "Planning"];
   const companyItems = ["History", "Our Team", "Blog"];
@@ -16,12 +14,12 @@ export default function Header() {
         <ul className="nav-links">
           <li>
             <Menu>
-              <MenuButton>Features</MenuButton>
-              <MenuDropdown>
+              <Menu.Button>Features</Menu.Button>
+              <Menu.Dropdown>
                 {featureItems.map((item) => (
-                  <MenuItem key={item}>{item}</MenuItem>
+                  <Menu.Item key={item}>{item}</Menu.Item>
                 ))}
-              </MenuDropdown>
+              </Menu.Dropdown>
             </Menu>
             <span>
               <img src={arrowDown} alt="arrow down image" />
@@ -29,12 +27,12 @@ export default function Header() {
           </li>
           <li>
             <Menu>
-              <MenuButton>Company</MenuButton>
-              <MenuDropdown>
+              <Menu.Button>Company</Menu.Button>
+              <Menu.Dropdown>
                 {companyItems.map((item) => (
-                  <MenuItem key={item}>{item}</MenuItem>
+                  <Menu.Item key={item}>{item}</Menu.Item>
                 ))}
-              </MenuDropdown>
+              </Menu.Dropdown>
             </Menu>
             <span>
               <img src={arrowDown} alt="arrow down image" />
